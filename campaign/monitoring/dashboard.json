@@ -1,0 +1,89 @@
+{
+  "dashboard": {
+    "title": "HRDCorp 2025 Campaign Health Dashboard",
+    "description": "Real-time monitoring of campaign performance and system health",
+    "panels": [
+      {
+        "id": "lead_generation",
+        "title": "Lead Generation",
+        "type": "stat",
+        "targets": [
+          {
+            "metric": "campaign.leads.total",
+            "alias": "Total Leads"
+          },
+          {
+            "metric": "campaign.leads.qualified",
+            "alias": "Qualified Leads"
+          },
+          {
+            "metric": "campaign.leads.converted",
+            "alias": "Converted Leads"
+          }
+        ]
+      },
+      {
+        "id": "engagement_metrics",
+        "title": "Engagement Metrics",
+        "type": "graph",
+        "targets": [
+          {
+            "metric": "campaign.engagement.likes",
+            "alias": "Likes"
+          },
+          {
+            "metric": "campaign.engagement.comments",
+            "alias": "Comments"
+          },
+          {
+            "metric": "campaign.engagement.shares",
+            "alias": "Shares"
+          }
+        ]
+      },
+      {
+        "id": "platform_performance",
+        "title": "Platform Performance",
+        "type": "table",
+        "targets": [
+          {
+            "metric": "campaign.platform.linkedin.impressions",
+            "alias": "LinkedIn Impressions"
+          },
+          {
+            "metric": "campaign.platform.facebook.impressions",
+            "alias": "Facebook Impressions"
+          },
+          {
+            "metric": "campaign.platform.twitter.impressions",
+            "alias": "Twitter Impressions"
+          }
+        ]
+      },
+      {
+        "id": "system_health",
+        "title": "System Health",
+        "type": "stat",
+        "targets": [
+          {
+            "metric": "system.api.response_time",
+            "alias": "API Response Time (ms)"
+          },
+          {
+            "metric": "system.database.connections",
+            "alias": "DB Connections"
+          },
+          {
+            "metric": "system.memory.usage",
+            "alias": "Memory Usage (%)
+          }
+        ]
+      }
+    ],
+    "refresh": "30s",
+    "time": {
+      "from": "now-24h",
+      "to": "now"
+    }
+  }
+}
