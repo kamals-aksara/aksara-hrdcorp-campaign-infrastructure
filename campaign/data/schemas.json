@@ -1,0 +1,102 @@
+{
+  "lead_schema": {
+    "type": "object",
+    "required": ["email", "name", "company", "source"],
+    "properties": {
+      "id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Unique identifier for the lead"
+      },
+      "email": {
+        "type": "string",
+        "format": "email",
+        "description": "Lead email address"
+      },
+      "name": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 100,
+        "description": "Full name of the lead"
+      },
+      "company": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 200,
+        "description": "Company name"
+      },
+      "job_title": {
+        "type": "string",
+        "maxLength": 100,
+        "description": "Job title or position"
+      },
+      "industry": {
+        "type": "string",
+        "enum": ["Technology", "Manufacturing", "Healthcare", "Finance", "Education", "Retail", "Hospitality", "Construction", "Logistics"],
+        "description": "Industry sector"
+      },
+      "company_size": {
+        "type": "string",
+        "enum": ["Startup", "SME", "Enterprise"],
+        "description": "Company size category"
+      },
+      "phone": {
+        "type": "string",
+        "pattern": "^\\+?[1-9]\\d{1,14}$",
+        "description": "Phone number in international format"
+      },
+      "source": {
+        "type": "string",
+        "enum": ["linkedin", "facebook", "twitter", "instagram", "youtube", "email", "website", "referral"],
+        "description": "Lead source platform"
+      },
+      "engagement_score": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 100,
+        "description": "Lead engagement score (0-100)"
+      },
+      "created_at": {
+        "type": "string",
+        "format": "date-time",
+        "description": "Lead creation timestamp"
+      },
+      "updated_at": {
+        "type": "string",
+        "format": "date-time",
+        "description": "Last update timestamp"
+      }
+    }
+  },
+  "campaign_metrics_schema": {
+    "type": "object",
+    "required": ["date", "platform", "metric_type"],
+    "properties": {
+      "date": {
+        "type": "string",
+        "format": "date",
+        "description": "Date of the metrics"
+      },
+      "platform": {
+        "type": "string",
+        "enum": ["linkedin", "facebook", "twitter", "instagram", "youtube", "email", "website"],
+        "description": "Platform name"
+      },
+      "metric_type": {
+        "type": "string",
+        "enum": ["impressions", "clicks", "likes", "shares", "comments", "leads", "conversions"],
+        "description": "Type of metric"
+      },
+      "value": {
+        "type": "number",
+        "minimum": 0,
+        "description": "Metric value"
+      },
+      "cost": {
+        "type": "number",
+        "minimum": 0,
+        "description": "Cost associated with the metric"
+      }
+    }
+  }
+}
