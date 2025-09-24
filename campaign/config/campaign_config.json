@@ -1,0 +1,73 @@
+{
+  "campaign": {
+    "name": "Aksara United HRDCorp Campaign 2025",
+    "version": "1.0.0",
+    "description": "Comprehensive HRDCorp training program outreach and lead generation campaign",
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31",
+    "status": "active",
+    "owner": "Aksara United",
+    "compliance": {
+      "hrdcorp_certified": true,
+      "data_protection": "PDPA_compliant",
+      "gdpr_compliant": true,
+      "audit_required": true
+    }
+  },
+  "targets": {
+    "primary": {
+      "industries": ["Technology", "Manufacturing", "Healthcare", "Finance", "Education"],
+      "company_sizes": ["SME", "Enterprise"],
+      "job_titles": ["HR Manager", "Training Manager", "Learning & Development", "CEO", "CTO"],
+      "locations": ["Malaysia", "Singapore", "Thailand", "Indonesia"]
+    },
+    "secondary": {
+      "industries": ["Retail", "Hospitality", "Construction", "Logistics"],
+      "company_sizes": ["Startup", "SME"],
+      "job_titles": ["Operations Manager", "General Manager", "Director"],
+      "locations": ["Vietnam", "Philippines", "Brunei"]
+    }
+  },
+  "objectives": {
+    "primary": "Generate 1000+ qualified leads for HRDCorp training programs",
+    "secondary": [
+      "Increase brand awareness by 300%",
+      "Achieve 25% conversion rate from leads to enrollments",
+      "Build database of 5000+ potential corporate clients",
+      "Establish thought leadership in HRDCorp training space"
+    ]
+  },
+  "budget": {
+    "total": 50000,
+    "currency": "MYR",
+    "allocation": {
+      "advertising": 20000,
+      "content_creation": 10000,
+      "automation_tools": 8000,
+      "analytics_tools": 5000,
+      "contingency": 7000
+    }
+  },
+  "kpis": {
+    "lead_generation": {
+      "target": 1000,
+      "current": 0,
+      "metric": "qualified_leads_per_month"
+    },
+    "engagement": {
+      "target": 15,
+      "current": 0,
+      "metric": "engagement_rate_percentage"
+    },
+    "conversion": {
+      "target": 25,
+      "current": 0,
+      "metric": "lead_to_enrollment_percentage"
+    },
+    "reach": {
+      "target": 100000,
+      "current": 0,
+      "metric": "total_impressions"
+    }
+  }
+}
