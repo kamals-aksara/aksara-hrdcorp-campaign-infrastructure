@@ -1,0 +1,111 @@
+{
+  "workflows": {
+    "lead_generation": {
+      "name": "Automated Lead Generation Workflow",
+      "description": "End-to-end lead generation and nurturing process",
+      "triggers": [
+        {
+          "type": "social_media_engagement",
+          "platforms": ["linkedin", "facebook", "twitter"],
+          "conditions": {
+            "engagement_type": ["like", "comment", "share", "click"],
+            "min_engagement_score": 5
+          }
+        },
+        {
+          "type": "website_visit",
+          "source": "campaign_traffic",
+          "conditions": {
+            "page_views": 3,
+            "time_on_site": 120
+          }
+        }
+      ],
+      "actions": [
+        {
+          "step": 1,
+          "action": "capture_lead_data",
+          "description": "Collect and validate lead information",
+          "data_points": [
+            "name", "email", "company", "job_title", 
+            "industry", "phone", "source", "engagement_score"
+          ]
+        },
+        {
+          "step": 2,
+          "action": "enrich_lead_data",
+          "description": "Enhance lead data with additional information",
+          "sources": ["linkedin_api", "company_database", "industry_data"]
+        },
+        {
+          "step": 3,
+          "action": "score_lead",
+          "description": "Calculate lead quality score",
+          "criteria": {
+            "engagement_level": 30,
+            "company_size": 25,
+            "job_title_relevance": 20,
+            "industry_match": 15,
+            "contact_completeness": 10
+          }
+        },
+        {
+          "step": 4,
+          "action": "assign_to_crm",
+          "description": "Add lead to CRM system",
+          "system": "hubspot",
+          "workflow": "hrdcorp_lead_nurturing"
+        }
+      ]
+    },
+    "content_distribution": {
+      "name": "Multi-Platform Content Distribution",
+      "description": "Automated content posting across all platforms",
+      "triggers": [
+        {
+          "type": "scheduled_posting",
+          "schedule": "daily",
+          "time": "09:00"
+        },
+        {
+          "type": "content_approval",
+          "status": "approved"
+        }
+      ],
+      "actions": [
+        {
+          "step": 1,
+          "action": "content_optimization",
+          "description": "Optimize content for each platform",
+          "platforms": {
+            "linkedin": {
+              "max_length": 3000,
+              "hashtags": 5,
+              "format": "professional"
+            },
+            "facebook": {
+              "max_length": 2000,
+              "hashtags": 3,
+              "format": "engaging"
+            },
+            "twitter": {
+              "max_length": 280,
+              "hashtags": 2,
+              "format": "concise"
+            }
+          }
+        },
+        {
+          "step": 2,
+          "action": "schedule_posts",
+          "description": "Schedule optimized content for each platform",
+          "timing": {
+            "linkedin": "09:00, 13:00, 17:00",
+            "facebook": "10:00, 15:00, 19:00",
+            "twitter": "08:00, 12:00, 16:00, 20:00"
+          }
+        }
+      ]
+    }
+  }
+}
