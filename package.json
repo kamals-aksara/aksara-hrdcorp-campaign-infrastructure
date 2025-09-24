@@ -1,0 +1,35 @@
+{
+  "name": "aksara-hrdcorp-campaign-infrastructure",
+  "version": "1.0.0",
+  "description": "Aksara United HRDCorp 2025 Campaign Infrastructure",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node index.js",
+    "build": "tsc",
+    "deploy": "node index.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "dotenv": "^16.0.0",
+    "jsonschema": "^1.0.0",
+    "lodash": "^4.17.21",
+    "node-cron": "^3.0.2",
+    "winston": "^1.0.0",
+    "yml": "^2.3.4"
+  },
+  "devDependencies": {
+    "@types/jsest": "^29.5.0",
+    "@types/lodash": "^4.14.199",
+    "jest": "^29.5.0",
+    "typescript": "^5.2.2"
+  },
+  "keywords": [
+    "aksara",
+    "hrdcorp",
+    "campaign",
+    "automation",
+    "marketing"
+  ],
+  "author": "Aksara United",
+  "license": "MIT"
